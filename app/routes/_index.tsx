@@ -50,9 +50,18 @@ const Index = () => {
           }}
         >
           <p style={{ color: "#666" }}>Links</p>
-          <ul>
+          <ul
+            style={{
+              padding: 0,
+            }}
+          >
             {resources.map(({ href, text }) => (
-              <li key={href}>
+              <li
+                key={href}
+                style={{
+                  listStyle: "none",
+                }}
+              >
                 <a
                   href={href}
                   target="_blank"
@@ -63,6 +72,7 @@ const Index = () => {
                     fontSize: "1.5rem",
                     padding: ".5rem",
                     textAlign: "center",
+                    textDecoration: "none",
                   }}
                 >
                   {text}
